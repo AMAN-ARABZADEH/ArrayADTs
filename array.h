@@ -4,7 +4,7 @@
 
 
 class Array{
- 
+ /// medlemsvariablar är privata
 private:
     int* A;
     int size;
@@ -12,9 +12,11 @@ private:
  
 public:
     Array(int size);
+    ~Array();  // destroys allocated memory , destrocture 
     void create();  // Asks users 
     void display();  // prints elements in array
-    ~Array();  // destroys allocated memory , destrocture 
+    void append(Array *arr, int x); // appends to last elements
+    void insert(Array  *arr, int index, int value); // Insert any pos
 };
 
 
