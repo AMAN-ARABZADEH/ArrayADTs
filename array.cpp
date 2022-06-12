@@ -101,3 +101,18 @@ bool Array::linSearch(Array *arr, int key){
        }
        return false;
      }
+
+     bool Array::BSrecursive(int arr[], int l, int h, int key){
+        int middle;
+        if(l <= h){
+         if(key == arr[middle]){
+           middle = (l+h) /2;
+           return true;
+         }else if(key < arr[middle]){
+           return BSrecursive(arr, l, middle-1, key);
+         }else{
+            return BSrecursive(arr, middle+1, h, key);
+         }
+      }
+      return false;
+     }

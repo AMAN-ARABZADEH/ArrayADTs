@@ -20,6 +20,7 @@ public:
     int Delete(Array *arr, int index); // For detletion of given index in array
     bool linSearch(Array *arr, int key);  // Searches
     bool Bsearch(Array *arr,int key); // Binary search
+    bool BSrecursive(int arr[],int l, int h, int key); // Recursive Binary search
 };
 
 
