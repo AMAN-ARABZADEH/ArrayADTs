@@ -17,6 +17,9 @@ public:
     void display();  // prints elements in array
     void append(Array *arr, int x); // appends to last elements
     void insert(Array  *arr, int index, int value); // Insert any pos
+    int Delete(Array *arr, int index); // For detletion of given index in array
+    bool linSearch(Array *arr, int key);  // Searches
+    bool Bsearch(Array *arr,int key); // Binary search
 };
 
 

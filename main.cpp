@@ -12,12 +12,15 @@ using std::cin;
 
 int main(){
     Array arr(10); 
-    int index, value, app;
+    int index, value, app,del,key;
     char selection;
+    cout << std::boolalpha << endl;
     do{
-     cout << "Enter C to create array: " << endl;
+     cout << "Enter C to create array:             " << endl;
      cout << "Enter D for display()                " << endl;
      cout << "Enter I for insert att any position: " << endl;
+     cout << "Enter R to delete at given index:    " << endl; 
+     cout << "Enter S to search:                   " << endl;
      cin >> selection;
      switch (selection){
      case 'C':
@@ -38,13 +41,30 @@ int main(){
       break;
      case 'A':
      case 'a':
-        cout << "Enter the value: " << std::flush;
+        cout << "Enter the value: ";
+        cin >> del;
+        arr.append(&arr, del);
+      break;
+     case 'R':
+     case 'r':
+        cout << "Enter the index: ";
         cin >> app;
-        arr.append(&arr, app);
+        cout << "The deleted element is: " << arr.Delete(&arr, app) << endl;
+        arr.display();
+      break;
+     case 'S':
+     case 's':
+        cout << "Enter the key search: ";
+        cin >> key;
+        cout << "The deleted element is: " << arr.Bsearch(&arr, key) << endl;
+      break;
+      case 'e':
+      case 'E':
+        cout << "Goodbye" << endl << "Have a good day!" << endl;
       break;
      default:
         cout << "Wrong choice try again:"  << endl;
-        break;
+        cin >> selection;
      }
     } while (selection != 'E' &&  selection != 'e');
     
