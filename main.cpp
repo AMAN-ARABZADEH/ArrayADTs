@@ -15,6 +15,16 @@ int main(){
     int index, value, app,del,key;
     char selection;
     cout << std::boolalpha << endl;
+
+
+    arr.create();
+    arr.display(&arr);
+    arr.insertSort(&arr, 25);
+    arr.display(&arr);
+    cout << arr.isSorted(&arr)<< endl;
+    arr.Reverse2(&arr);
+    cout << arr.isSorted(&arr)<< endl;
+    arr.display(&arr);
     do{
      cout << "Enter C to create array:             " << endl;
      cout << "Enter D for display()                " << endl;
@@ -29,7 +39,7 @@ int main(){
       break;
      case 'D':
      case 'd':
-        arr.display();
+        arr.display(&arr);
       break;
      case 'I':
      case 'i':
@@ -50,7 +60,7 @@ int main(){
         cout << "Enter the index: ";
         cin >> app;
         cout << "The deleted element is: " << arr.Delete(&arr, app) << endl;
-        arr.display();
+        arr.display(&arr);
       break;
      case 'S':
      case 's':
