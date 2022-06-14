@@ -18,13 +18,13 @@ int main(){
 
 
     arr.create();
-    arr.display(&arr);
-    arr.insertSort(&arr, 25);
-    arr.display(&arr);
-    cout << arr.isSorted(&arr)<< endl;
-    arr.Reverse2(&arr);
-    cout << arr.isSorted(&arr)<< endl;
-    arr.display(&arr);
+    arr.display();
+    arr.insertSort( 25);
+   arr.display();
+    cout << arr.isSorted()<< endl;
+    arr.Reverse2();
+    cout << arr.isSorted()<< endl;
+   arr.display();
     do{
      cout << "Enter C to create array:             " << endl;
      cout << "Enter D for display()                " << endl;
@@ -39,7 +39,7 @@ int main(){
       break;
      case 'D':
      case 'd':
-        arr.display(&arr);
+       arr.display();
       break;
      case 'I':
      case 'i':
@@ -47,26 +47,26 @@ int main(){
         cin >> index;
         cout << "Enter the value: " << std::flush;
         cin >> value;
-        arr.insert(&arr,index, value);
+        arr.insert(index, value);
       break;
      case 'A':
      case 'a':
         cout << "Enter the value: ";
         cin >> del;
-        arr.append(&arr, del);
+        arr.append(del);
       break;
      case 'R':
      case 'r':
         cout << "Enter the index: ";
         cin >> app;
-        cout << "The deleted element is: " << arr.Delete(&arr, app) << endl;
-        arr.display(&arr);
+        cout << "The deleted element is: " << arr.Delete(app) << endl;
+         arr.display();
       break;
      case 'S':
      case 's':
         cout << "Enter the key search: ";
         cin >> key;
-        cout << "The deleted element is: " << arr.Bsearch(&arr, key) << endl;
+        cout << "The deleted element is: " << arr.Bsearch( key) << endl;
       break;
       case 'e':
       case 'E':
